@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>模板字符串</title>
+</head>
+<body>
+    <table id="art"></table>
+    <table id="artT"></table>
+    <!--<table>-->
+        <!--<tr>-->
+            <!--<td></td>-->
+        <!--</tr>-->
+    <!--</table>-->
+
+<script type="text/javascript">
+    let tb=[
+        {name:'you',age:'21'},
+        {name:'i',age:'25'},
+        {name:'he',age:'28'}
+    ];
+    var strAdd1='';
+    var strAdd2='';
+    for(var i=0;i<tb.length;i++){
+        strAdd1+='<tr><td>'+tb[i].name+'</td><td>'+tb[i].age+'</td></tr>'
+    }
+    for (var j=0;j<tb.length;j++){
+        strAdd2+=`<tr>
+                    <td>${tb[j].name}</td>
+                    <td>${tb[j].age}</td>
+                  </tr>`
+    }
+    document.getElementById('art').innerHTML=strAdd1;
+    document.getElementById('artT').innerHTML=strAdd2;
+//    document.write(strAdd)
+</script>
+</body>
+</html>

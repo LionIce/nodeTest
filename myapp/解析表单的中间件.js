@@ -1,11 +1,11 @@
 const express=require('express');
 const app=express();
 
-
-const writeLogs=require('./writeLogs.js');
-app.use(writeLogs);
 const parseForm=require('./parseForm.js');
 app.use(parseForm);
+const writeLogs=require('./writeLogs.js');
+app.use(writeLogs);
+
 //导入路由模块
 const router=require('./router.js');
 app.use(router);

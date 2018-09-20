@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>添加</title>
+    <link type="text/css" rel="stylesheet" href="../../node_modules/bootstrap/dist/css/bootstrap.min.css">
+</head>
+<body>
+    <form id="form">
+        <div class="form-group">
+            <label>名称：</label>
+            <input type="text" name="name" class="form-control">
+            <label>年龄：</label>
+            <input type="text" name="age" class="form-control">
+        </div>
+        <div class="form-group">
+            <label>性别：</label>
+            <label>
+                <input type="radio" name="gender" value="男" checked>男
+            </label>
+            <label>
+                <input type="radio" name="gender" value="女">女
+            </label>
+        </div>
+        <input type="submit" value="提交" class="btn btn-primary">
+    </form>
+
+
+    <script src="../../node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="../../node_modules/axios/dist/axios.js"></script>
+    <script src="../assets/js/add.js"></script>
+</body>
+</html>

@@ -10,9 +10,11 @@
 <body>
 <h3>人员管理器</h3>
 <hr/>
+<div class="addP">
+    <a href="add.html">添加信息</a>
+</div>
 
 <table>
-        <span>添加信息</span>
     <thead>
         <tr>
             <th>编号</th>
@@ -38,9 +40,9 @@
     <td>{{$value.age}}</td>
     <td>{{$value.ctime}}</td>
     <td>
-        <a href="javascript:void(0)">查看</a>
-        <a href="javascript:void(0)">修改</a>
-        <a href="javascript:void(0)">删除</a>
+        <a href="/info.html?id={{$value.id}}" title='{{$value.id}}' class="check">查看</a>
+        <a href="/updata.html?id={{$value.id}}" title='{{$value.id}}' class="updata">修改</a>
+        <a href="javascript:void(0)" title='{{$value.id}}' class='del'>删除</a>
     </td>
 </tr>
 {{/each}}
@@ -48,6 +50,7 @@
 
 
 <script src="../node_modules/jquery/dist/jquery.min.js"></script>
+<script src="../../node_modules/axios/dist/axios.js"></script>
 <script src="../../node_modules/art-template/lib/template-web.js"></script>
 <script src="../assets/js/index.js"></script>
 </body>

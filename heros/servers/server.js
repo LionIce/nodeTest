@@ -23,14 +23,14 @@ conn.connect();
 //查询所有数据信息
 app.get('/api/getheros',(req,res)=>{
     // res.send('ok');
-    const sqlStr='select * from heros where isdel=0';
+    const sqlStr='select * from heros where isdel=0 order by id asc';
     conn.query(sqlStr,(err,results)=>{
         if(err) return res.json({err_code:1,message:'获取参数失败',affectedRows:0});
         res.json({err_code:0,message:results,affectedRows:0});
     })
 })
 //根据id更新信息
-app.post('/api/postheros',(req,res)=>{
+app.post('/api/postheros',bodyParser.json(),(req,res)=>{
     const sqlStr='update heros set ? where id=?';
     conn.query(sqlStr,[req.body,req.body.id],(err,results)=>{
         if(err) return res.json({err_code:1,message:'更新失败',affectedRows:0});
@@ -59,7 +59,7 @@ app.get('/api/delhero',(req,res)=>{
     })
 })
 //添加信息
-app.post('/api/addhero',(req,res)=>{
+app.post('/api/addhero',bodyParser.json(),(req,res)=>{
     const hero=req.body;
     console.log(hero);
     //补全英雄的创建时间

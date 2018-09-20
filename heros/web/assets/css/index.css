@@ -4,11 +4,23 @@
 }
 body{
     background-color: aqua;
+    width: 80%;
 }
-span{
-    display: inline-block;
+a{
+    text-decoration: none;
+    color: white;
+}
+h3{
+    margin: 20px 0;
+}
+.addP{
+    height: 50px;
+}
+.addP a{
+    margin: 10px 100px 0;
     padding: 5px 10px;
     background: greenyellow;
+    float: right;
 }
 table{
     width: 60%;

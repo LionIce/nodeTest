@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>修改</title>
+    <link type="text/css" rel="stylesheet" href="../../node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link type="text/css" rel="stylesheet" href="../assets/css/index.css">
+</head>
+<body>
+    <form id="form">
+        
+    </form>
+
+    <script id="tmpl" type="text/template">
+        <div class="form-group">
+            <label>编号：</label>
+            <input type="text" name="id" class="form-control" value='{{id}}'>
+            <label>名称：</label>
+            <input type="text" name="name" class="form-control" value='{{name}}'>
+            <label>年龄：</label>
+            <input type="text" name="age" class="form-control" value='{{age}}'>
+        </div>
+        <div class="form-group">
+            <label>性别：</label>
+            <label>
+                <input type="radio" name="gender" value="男" {{gender=='男'?'checked':''}}>男
+            </label>
+            <label>
+                <input type="radio" name="gender" value="女" {{gender=='女'?'checked':''}}>女
+            </label>
+        </div>
+        <input type="submit" value="提交" class="btn btn-primary">
+    </script>
+
+    <script src="../node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="../../node_modules/axios/dist/axios.js"></script>
+    <script src="../../node_modules/art-template/lib/template-web.js"></script>
+    <script src="../assets/js/updata.js"></script>
+</body>
+</html>

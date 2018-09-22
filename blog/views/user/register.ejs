@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>注册</title>
+    <link type="text/css" rel="stylesheet" href="./views/user/css/login.css">
+</head>
+<body>
+    <div id="content" style="height:350px">
+        <div class="login-header">
+            <p>用户注册</p>
+        </div>
+        <form id="form">
+            <div class="login-input-box">
+                <span class="icon icon-user"></span>
+                <input type="text" name="username" placeholder="Please enter your email/phone" required>
+            </div>
+            <div class="login-input-box">
+                <span class="icon icon-password"></span>
+                <input type="password" name="password" placeholder="Please enter your password" required>
+            </div>
+            <div class="login-input-box">
+                <span class="icon icon-password"></span>
+                <input type="text" name="nickname" placeholder="Please enter your nickname" required>
+            </div>
+            <input type="submit" value="注册新用户">
+        </form>
+        <div class="remember-box">
+            <label>
+                <input type="checkbox">&nbsp;记住
+            </label>
+        </div>
+        <div class="logon-box">
+            <a href="">忘记密码?</a>
+            <a href="">登录</a>
+        </div>
+    </div>
+    <script src="../../node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="../../node_modules/axios/dist/axios.min.js"></script>
+    <script src="./views/user/js/register.js"></script>
+</body>
+</html>

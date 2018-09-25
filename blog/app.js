@@ -1,6 +1,13 @@
 //项目入口文件
 const express=require('express');
 const app=express();
+
+const session=require('express-session');
+app.use(session({
+    secret:'gdukasgdutehs',//加密文本
+    resave:false,//如果位true表示强制把session存储到物理磁盘上，从而保证session不会丢失，推荐false
+    saveUninitialized:false//如果为true表示强制没有初始化的session保存到storage中，推荐false
+}))
 const bodyParser=require('body-parser');
 app.use(bodyParser.urlencoded({extended:false}));
 // const cors=require('cors');

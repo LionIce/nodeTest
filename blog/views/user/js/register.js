@@ -6,7 +6,8 @@ $(function(){
 
         console.log("$('form').serialize()");
         axios.post('/register',$('#form').serialize()).then(results=>{
-            if(results.data.err_code===1){
+            // console.log(results.data.err_code);
+            if(results.data.err_code===0){
                 location.href='/login'
             }else{
                 alert(results.data.message);
